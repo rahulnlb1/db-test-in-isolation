@@ -1,0 +1,24 @@
+
+resources:
+  - name: Github
+    type: GitRepo
+    configuration:
+      gitProvider: Github
+      path: rahulnlb1/db-test
+      branches:
+        include: master
+
+pipelines:
+  - name: test_database_in_isolation
+    steps:
+      - name: Test
+        type: Bash
+        configuration:
+          inputResources:
+            - name: Github
+        execution:
+          onExecute:
+            - pushd $res_Github_resourcePath
+            - ls -la
+            - npm i
+            - npm run test
