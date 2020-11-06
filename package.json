@@ -1,0 +1,15 @@
+{
+  "name": "db-test-in-isolation",
+  "version": "1.0.0",
+  "description": "This is a simple example where we use Node.js to test our database logic in isolation.",
+  "main": "test-runner.js",
+  "scripts": {
+    "test": "node test-runner.js"
+  },
+  "author": "rahulnlb1",
+  "license": "ISC",
+  "dependencies": {
+    "log-symbols": "4.0.0",
+    "mysql2": "2.2.5"
+  }
+}
